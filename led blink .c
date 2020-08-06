@@ -1,26 +1,15 @@
-#include<lpc214x.h>  //import LPC libraries
-#include<stdint.h>    
 
-void delay_ms(uint16_t j)   // function to provide delay
+#include <lpc214x.h>       //import LPC libraries
+unsigned int delay;
+int main(void)
 {
-	uint16_t x,i;
-	for(i=0;i<j;++i)
-	{
-		for(x=0;x<6000;x++);
-	}
-	
+  IO0DIR = (1<<10);   // declare  P0.09 as Output
+  
+  while(1)  // forever loop 
+  {
+    IO0CLR = (1<<10);    //  clear to turn led on 
+    for(delay=0;delay<; delay++);
+    IO0SET = (1<<10);    //   set to Turn Led on 
+    for(delay=0; delay<500000; delay++); 
+  }
 }
-
-int main(void)       // main function
-{
-	IO0DIR=0x000000FF;    // initializing pins 0.0 to 0.7 as output
-	while(1)              //loop forever
-	{
-		IO0PIN=IO0PIN | 0x00000001;   //sets the value of pin 0.0 to HIGH
-		delay_ms(1000);                //1 sec delay
-		IO0PIN=IO0PIN & 0xFFFFFF00;   //sets the value of pin 0.0 to  LOW
-		delay_ms(1000);                // 1 sec delay 
-	
-	}
-}
-
