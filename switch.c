@@ -1,18 +1,28 @@
-#include<lpc214x.h>
+#include <lpc214x.h>   
 #include<stdint.h>
 
 
-int main(void)
+int main() 
 {
-	IO0DIR=0x0000000F;
-	
-	while(1)
-	{
-		IO0PIN=IO0PIN | 0x00000001;
-		if((IO0PIN && 0x00000002 )== 0x00000000)
-		{
-		IO0PIN=IO0PIN | 0x00000004;
-		}
-	
-	}
+    unsigned int Status;
+
+    
+    
+    IO0DIR = ((1<<6) | (0<<4)); // LED pin as output and Switch Pin as input 
+
+  while(1)
+    {
+
+     /* Turn On all the leds and wait for one second */ 
+        Status = (IO0PIN>>4) & 0x01 ;  // Read the switch status
+       
+       if(Status == 1)                 //Turn ON/OFF LEDs depending on switch status
+       {  
+         IO0PIN = (1<<6);
+	         }
+       else
+       {
+         IO0PIN = (0<<6);
+       }      
+    }
 }
