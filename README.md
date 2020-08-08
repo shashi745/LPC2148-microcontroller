@@ -7,10 +7,10 @@ The NXP (founded by Philips) LPC2148 is an ARM7TDMI-S based high-performance 32-
 
 #INPUT/OUTPUT PORTS (GPIO of LPC2148)
 
- LPC2148 has two IO ports each of 32-bit wide, provided by 64 IO pins.
- Ports are named as P0 and P1.
- Pins of each port labeled as Px.y where “x” stands for port number, 0 or 1. 
- Where “y” stands for pin number usually between 0 to 31. Each pin can perform multiple functions.
+ .LPC2148 has two IO ports each of 32-bit wide, provided by 64 IO pins.
+ .Ports are named as P0 and P1.
+ .Pins of each port labeled as Px.y where “x” stands for port number, 0 or 1. 
+ .Where “y” stands for pin number usually between 0 to 31. Each pin can perform multiple functions.
  
  
  
