@@ -1,4 +1,3 @@
-
 #include <lpc214x.h>       //import LPC libraries
 unsigned int delay;
 int main(void)
@@ -13,3 +12,4 @@ int main(void)
     for(delay=0; delay<1000; delay++); 
   }
 }
+

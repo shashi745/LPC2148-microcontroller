@@ -1,0 +1,4 @@
+--cpu ARM7TDMI "startup.o" "weak.o" --strict --scatter "weak.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\weak.map" -o weak.axf
