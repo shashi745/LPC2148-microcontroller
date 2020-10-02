@@ -11,6 +11,15 @@ int main(void)
 		delay();
 		IOCLR0=0XFFFFFFFF;
 		delay();
+		
+		IOSET0=0XFFFFFFFF;
+		delay();
+		IOCLR0=0XFFFFFFFF;
+		delay();
+		IOSET0=0XFFFFFFFF;
+		delay();
+		IOCLR0=0XFFFFFFFF;
+		delay();
 	}
 }
 void delay (void)
